@@ -1,0 +1,151 @@
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Nosifer&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Nosifer&display=swap');
+        body {
+            background-color: rgb(16, 16, 16);
+            color: white;
+            font-family:"montserrat";
+            overflow-x: hidden;
+            animation: fadein 1s ;
+            padding: 0px;
+        }
+        @keyframes fadein {
+            0% { opacity: 0;}
+            100% { opacity: 3;}
+        }
+        .bg {
+            position: static;
+            pointer-events: none;
+            z-index: -10;        
+
+        }
+        .loadup {
+            animation: loadup 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 ;
+
+        }
+        @keyframes loadup {
+            0% {transform: translateY(-100px)} ;
+            100% (transform: translateY(0px)) ;
+        }
+        .loaddown {
+            animation: loaddown 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 ;
+
+        }
+        @keyframes loaddown {
+            0% {transform: translateY(100px)} ;
+            100% (transform: translateY(-10px)) ;
+        }
+        .header {
+            position: absolute;
+            top: 30vh;
+            left: 10vh;
+            width: 100vh;
+            border-radius: 3vh;
+            border-color: white;
+            border-width: 1vh 1vh 1vh;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px); 
+            background-color: rgba(39, 39, 39, 0.3);   
+        }
+        .showreel {
+            position: absolute;
+            top: 17vh;
+            right: 20vh;
+            width: 70vh;
+            border-radius: 3vh;
+            border-color: white;
+            border-width: 1vh 1vh 1vh;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px); 
+            background-color: rgba(39, 39, 39,0.3) ;
+            justify-content: space-between;
+        }
+        .CTA {
+            font-family: "montserrat";
+            font-size:medium;
+            padding: 3vh 5vh;
+            color: rgb(255, 255, 255) ;
+            background-color: rgb(255, 106, 0);
+            border: 0;
+            border-radius: 1vh;
+            transition: all 0.2s;
+            border-width: 0.3vh;
+            
+        }
+        .CTA:hover {
+            scale: 1.04;
+            color: black;
+        }
+        .topcta {
+            position: absolute ;
+            top: 70vh;
+            left: 10vh;
+        }
+        .mywork {
+            position: absolute;
+            width: 50vh;
+            bottom: 0vh;
+            left: 80vh;
+            opacity: 0.9;
+            animation: shake 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+        .examples {
+            height: 100vh;
+            background-color: rgb(35, 35, 35);
+            background-image: url(img/myworkbg.png);
+            background-size: 100%;
+            background-repeat: repeat-y;
+            display: flex;
+            
+        }
+
+    </style>
+    <head>
+        <title>Save HOURS Editing!</title>
+    </head>
+    <body>
+        <div class="bg">
+            <img class="loadup" style="width: 100vh; position: absolute; top: -1vh; left: -1vh;" src="img/topbg.png">
+            <img class="loaddown" style="width: 100%; height:100vh ; bottom: 0vh; right: 0vh;" src="img/bottombg.png">
+        </div>
+        <div class="header">
+            <h1 style="font-size: 10vh; line-height: 2vh;">Hey, I'm Suchet</h1>
+            <p>I help upcoming creators grow faster by allowing them to produce more content, in less time. You can be assured of a consistent 
+                style, retention focused editing, and smooth edits to ensure that your content is the best it can be! Check out my work and see
+                what you like. Contact me and we'll chat.</p>
+        </div> 
+        <div class="topcta">
+            <a href="mailto:suchetsn.media@gmail.com?Subject=I want my video's to be the best they can be!&body=Let me get an idea of your channel,
+             feel free to leave anything blank if you're not sure. %0D%0A%0D%0A Channel Link: %0D%0A%0D%0A 
+            Describe Your Style: %0D%0A%0D%0A
+            Anything Else:">
+            <button class="CTA" >Let's Chat <span>&#9993;</span></button></a>
+        </div>
+        <div class="showreel"><center>
+            <h1>Here's what I can do...</h1>
+            <video width="100%" controls src="vid/reel.mp4"></video>
+        </center></div>
+        <img class="mywork" src="img/my work.png">
+        <div class="examples">
+
+        </div>
+    </body>
+</html>
